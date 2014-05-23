@@ -12,6 +12,15 @@ angular.module('mockItApp', [
         templateUrl: 'partials/main',
         controller: 'MainCtrl'
       })
+      .when('/buckets', {
+        templateUrl: 'buckets/list.html',
+        controller: 'BucketsListCtrl'
+      })
+      .when('/buckets/:bucketId/', {
+        templateUrl: 'buckets/details.html',
+        controller: 'BucketDetailsCtrl'
+      })
+      
       .otherwise({
         redirectTo: '/'
       });
