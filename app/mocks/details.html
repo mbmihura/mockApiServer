@@ -1,0 +1,36 @@
+{{msg}}
+
+<h4>Bucket: {{bucketId}}</h4>
+<h2>Mock: {{mockId}}</h2>
+
+<form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label for="inputRequestPath" class="col-sm-2 control-label">Path</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputRequestPath" placeholder="Path">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputRequestVerb" class="col-sm-2 control-label">Verb</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputRequestVerb" placeholder="Verb">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputResponseStatus" class="col-sm-2 control-label">Response Status</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputBodyResponse" placeholder="Response Status">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputResponseBody" class="col-sm-2 control-label">Response Body</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" id="inputResponseBody" placeholder="Response Body" rows="8"></textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Save</button>
+    </div>
+  </div>
+</form>
