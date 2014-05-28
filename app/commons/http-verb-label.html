@@ -1,0 +1,8 @@
+ <div ng-switch="verb">
+    <span ng-switch-when="GET" class="label label-success">{{verb}}</span>
+    <span ng-switch-when="POST" class="label label-warning">{{verb}}</span>
+    <span ng-switch-when="PUT" class="label label-primary">{{verb}}</span>
+    <span ng-switch-when="DELETE" class="label label-danger">{{verb}}</span>
+    <span ng-switch-when="PATCH" class="label label-info">{{verb}}</span>
+    <span ng-switch-default class="label label-default">{{verb}}</span>
+  </div>

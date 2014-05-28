@@ -1,0 +1,15 @@
+<div class="btn-group">
+	<button type="button" class="btn btn-xs" ng-class="{'btn-success':status=='started','btn-danger':status=='stopped','btn-warning':status!='stopped' && status != 'started'}">{{status}}</button>
+	<button type="button" class="btn btn-xs dropdown-toggle" ng-class="{'btn-success':status=='started','btn-danger':status=='stopped','btn-warning':status!='stopped' && status != 'started'}" data-toggle="dropdown">
+		<span class="caret"></span>
+	    <span class="sr-only">Mock's options</span>
+	</button>
+  	<ul class="dropdown-menu" role="menu">
+    	<li ng-show="status == 'stopped'"><a href="#">Start</a></li>
+    	<li ng-show="status == 'started'"><a href="#">Stop</a></li>
+    	<li><a href="#">Edit</a></li>
+    	<li><a href="#">View Request</a></li>
+    	<li class="divider"></li>
+    	<li><a href="#">Delete</a></li>
+  	</ul>
+</div>
