@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('mockItApp')
-  .controller('MocksListInBucketCtrl', function ($scope) {
-    $scope.msg = "TODO: Display buckets's mock list of current user.";
+  .controller('MocksListInBucketCtrl', function ($scope, $routeParams, Mock) {
+    $scope.endpointsMocks = Mock.query({bucketId: $routeParams.bucketId});
   });
 
 angular.module('mockItApp')
@@ -18,4 +18,5 @@ angular.module('mockItApp')
     $scope.bucketId = $routeParams.bucketId;
     $scope.mockId = "New Mock";
   });
+
 

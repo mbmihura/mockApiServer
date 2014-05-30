@@ -1,1 +1,45 @@
-{{msg}}
+<div class="col-sm-3 col-md-2 sidebar">
+  <ul class="nav nav-sidebar">
+    <li class="active"><a href="#">All Endpoints Mocks</a></li>
+    <li ng-repeat="mock in endpointsMocks"><a href="#">{{mock.name}}</a></li>
+    <li><a href="#">Create Endpoint Mock</a></li>
+  </ul>
+</div>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+  <h2 class="sub-header">All <small>Endpoints Mocks</small></h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Verb</th>
+          <th>Path</th>
+          <th>Content-Type</th>
+          <th>Accept</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="mock in endpointsMocks">
+          <td><a>{{mock.name}}</a></td>
+          <td><mk-http-verb-label verb="mock.verb"></mk-http-verb-label></td>
+          <td>{{mock.url}}</td>
+          <td>{{mock.contentType}}</td>
+          <td>{{mock.accept}}</td>
+          <td>
+
+            <mk-mock-status-dropdown status="mock.status"></mk-mock-status-dropdown>
+          </td>
+        </tr>
+        <tr>
+          <td>Lorem</td>
+          <td><span class="label label-default">OPTIONS</span></td>
+          <td>checkIn/pas</td>
+          <td>*/*</td>
+          <td>*/*</td>
+          <td><button type="button" class="btn btn-xs btn-warning">Starting</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
