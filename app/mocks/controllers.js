@@ -2,7 +2,8 @@
 
 angular.module('mockItApp')
   .controller('MocksListInBucketCtrl', function ($scope, $routeParams, Mock) {
-    $scope.endpointsMocks = Mock.query({bucketId: $routeParams.bucketId});
+    $scope.currentBucketId = $routeParams.bucketId;
+    $scope.endpointsMocks = Mock.query({bucketId: $scope.currentBucketId});
   });
 
 angular.module('mockItApp')

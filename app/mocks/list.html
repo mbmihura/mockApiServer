@@ -1,8 +1,8 @@
 <div class="col-sm-3 col-md-2 sidebar">
   <ul class="nav nav-sidebar">
+    <li><a ng-href="mocks/{{currentBucketId}}/new">Create Endpoint Mock</a></li>
     <li class="active"><a href="#">All Endpoints Mocks</a></li>
-    <li ng-repeat="mock in endpointsMocks"><a href="#">{{mock.name}}</a></li>
-    <li><a href="#">Create Endpoint Mock</a></li>
+    <li ng-repeat="mock in endpointsMocks"><a ng-href="mocks/{{currentBucketId}}/view/{{mock.mockId}}">{{mock.name}}</a></li>
   </ul>
 </div>
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -21,7 +21,7 @@
       </thead>
       <tbody>
         <tr ng-repeat="mock in endpointsMocks">
-          <td><a>{{mock.name}}</a></td>
+          <td><a ng-href="mocks/{{currentBucketId}}/view/{{mock.mockId}}">{{mock.name}}</a></td>
           <td><mk-http-verb-label verb="mock.verb"></mk-http-verb-label></td>
           <td>{{mock.url}}</td>
           <td>{{mock.contentType}}</td>
