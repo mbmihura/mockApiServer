@@ -25,9 +25,9 @@ angular.module('mockItApp', [
         templateUrl: 'mocks/list.html',
         controller: 'MocksListInBucketCtrl'
       })
-      .when('/mocks/:bucketId/view/:mockId', {
+      .when('/mocks/:bucketId/edit/:mockId', {
         templateUrl: 'mocks/details.html',
-        controller: 'MockDetailsInBucketCtrl'
+        controller: 'EditMockInBucketCtrl'
       })
       .when('/mocks/:bucketId/new', {
         templateUrl: 'mocks/details.html',
